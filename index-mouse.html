@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotate card with pointer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .card .back {
+        transform: rotateY(0deg);
+      }
+      .card .front {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="front face"></div>
+      <div class="back face"></div>
+    </div>
+    <script>
+      const front = document.querySelector(".front");
+      const back = document.querySelector(".back");
+      document.addEventListener("mousemove", (event) => {
+        const { clientX: x } = event;
+        const { innerWidth: width } = window;
+        const rotationFactor = (2 * x - width) / width;
+        const rotation = rotationFactor * 180;
+        back.style.transform = `rotateY(${rotation}deg)`;
+        front.style.transform = `rotateY(${rotation + 180}deg)`;
+      });
+    </script>
+  </body>
+</html>
