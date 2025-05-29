@@ -32,8 +32,21 @@ body {
   backface-visibility: hidden;
 }
 .card .back {
-  background-image: url(back.jpg);
+  background-color: black;
+  color: red;
+  text-align: center;
+  align-items: center;
+
 }
 .card .front {
-  background-image: url(front.jpg);
+  color: black;
+  background-color: rgb(228, 86, 86);
+}
+
+.back h1{
+  margin-top: 70%;
+}
+
+.front h1{
+  margin-top: 50%;
 }
