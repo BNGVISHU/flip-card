@@ -21,7 +21,7 @@ body {
 .card {
   position: relative;
   aspect-ratio: 477 / 768;
-  height: 80vmin;
+  height: 90vmin;
 }
 .card .face {
   position: absolute;
